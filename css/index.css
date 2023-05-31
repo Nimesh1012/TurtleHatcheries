@@ -1,0 +1,620 @@
+.alert {
+    position: fixed;
+    top: 0;
+    width: 96%;
+    background-color: yellow;
+    font-size: 14px;
+    text-align: center;
+    padding: 20px 2%;
+    opacity: 1;
+    animation-name: alert;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    z-index: 999999;
+}
+
+.msg_sent {
+    background-color: #c8ffbe;
+}
+
+.msg_not_sent {
+    background-color: #ffede4;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes alert {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+        z-index: -999;
+    }
+}
+
+/* Standard syntax */
+@keyframes alert {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+        z-index: -999;
+    }
+}
+
+
+#intro {
+    margin: 5% 0;
+    text-align: center;
+}
+
+#intro h1 {
+    text-align: center;
+    width: 90%;
+    margin: 3% auto;
+    max-width: 590px;
+}
+
+#intro p {
+    text-align: center;
+    width: 90%;
+    margin: 3% auto;
+}
+
+.mob_dsp {
+    display: none;
+}
+
+h1.mob_dsp {
+    margin-top: 15%;
+    text-align: center;
+    font-weight: normal;
+}
+
+.grecaptcha-badge {
+    z-index: 999;
+}
+
+#spcl_bb {
+    clear: both;
+    width: 90%;
+    margin: auto;
+    position: relative;
+    overflow: auto;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+
+/*-----------------*/
+.bb_main {
+    width: 100%;
+    clear: both; /*max-height: 488px;*/
+    overflow: hidden;
+}
+
+.bb_main .rslides {
+    z-index: 999;
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+}
+
+.bb_main .rslides li {
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.bb_main .rslides li:first-child {
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.bb_main .rslides img {
+    display: block;
+    height: auto;
+    float: right;
+    width: 100%;
+}
+
+
+.bb_h3_text { /*background-color: rgba(44, 43, 72, 0.6);*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35%;
+    color: #fff;
+    z-index: 9999;
+    height: 100%;
+    font-size: 35px;
+    line-height: 150%;
+    padding: 5%;
+    display: block;
+    display: none;
+}
+
+.bb_p_text {
+    position: absolute;
+    right: 0;
+    top: 250px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 23px;
+    display: block;
+    width: 35%;
+    padding: 0 5%;
+    display: none;
+}
+
+.bb_p_text a {
+    color: inherit;
+    font-size: 16px;
+    display: none;
+}
+
+/*-----------*/
+
+
+.bb {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    overflow: auto;
+}
+
+.bb .lt {
+    padding-top: 10px;
+    width: 45%;
+    float: left;
+    min-height: 400px;
+    padding-left: 7%;
+}
+
+.bb .lt .img_blk {
+    width: 31%;
+    float: left;
+    margin: 1%;
+    position: relative;
+}
+
+.bb .lt img {
+    display: block;
+    width: 100%;
+}
+
+.bb .lt .img_blk p {
+    position: absolute;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.7;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 3px 0;
+}
+
+
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.img_blk {
+    opacity: 0; /* make things invisible upon start */
+    -webkit-animation: fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode: forwards; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+    -webkit-animation-duration: 3s;
+    -moz-animation-duration: 3s;
+    animation-duration: 3s;
+}
+
+/*.fade-in.blk_one {
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.fade-in.blk_two {
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay:0.2s;
+  animation-delay: 0.2s;
+}
+
+.fade-in.blk_three {
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+
+
+.fade-in.blk_four {
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+.fade-in.blk_five {
+  -webkit-animation-delay: 0.8s;
+  -moz-animation-delay:0.8s;
+  animation-delay: 0.8s;
+}
+
+.fade-in.blk_six {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+
+.fade-in.blk_seven{
+  -webkit-animation-delay: 1.2s;
+  -moz-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+
+.fade-in.blk_eight {
+  -webkit-animation-delay: 1.4s;
+  -moz-animation-delay:1.4s;
+  animation-delay: 1.4s;
+}
+
+.fade-in.blk_nine {
+  -webkit-animation-delay: 1.6s;
+  -moz-animation-delay: 1.6s;
+  animation-delay: 1.6s;
+}*/
+
+
+.bb .rt {
+    padding-top: 10px;
+    width: 48%;
+    float: right; /*background: #f2f2f2;*/
+    min-height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.item-1, .item-2, .item-3 {
+    position: absolute;
+    display: block;
+    top: 20%;
+    width: 60%;
+    animation-duration: 30s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    overflow: hidden;
+}
+
+.item-4 {
+    position: absolute;
+    display: block;
+    top: 20%;
+    width: 60%;
+    animation-duration: 30s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    overflow: hidden;
+}
+
+/*
+.item-1{
+  animation-name: anim-1;
+}
+
+.item-2{
+  animation-name: anim-2;
+}
+
+.item-3{
+  animation-name: anim-3;
+}
+
+
+
+@keyframes anim-1 {
+  0%, 8.3% { right: -100%; opacity: 0; }
+  8.3%,25% { right: 25%; opacity: 1; }
+  33.33%, 100% {opacity: 0; }
+}
+
+@keyframes anim-2 {
+  0%, 33.33% { right: -100%; opacity: 0; }
+  41.63%, 58.29% { right: 25%; opacity: 1; }
+  66.66%, 100% {opacity: 0; }
+}
+
+@keyframes anim-3 {
+  0%, 66.66% { right: -100%; opacity: 0; }
+  74.96%, 91.62% { right: 25%; opacity: 1; }
+  95% {opacity: 0; }
+  100% {opacity: 0;}
+
+}
+*/
+.bb .rt h3 {
+    font-size: 35px;
+}
+
+.bb .rt p {
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.bb .rt a {
+    color: #3c508d;
+}
+
+
+#spcl_bb {
+    margin-top: 37px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bb_blk_img {
+    width: 31%;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    margin: 1%;
+    box-shadow: 1px 1px 5px #c7c7c7;
+    padding-bottom: 30px;
+    min-width: 300px;
+    list-style: none;
+}
+
+.bb_blk_img h2 {
+    text-align: center;
+    padding: 20px;
+}
+
+
+.bb_desc1 {
+    background-color: #fff; /*position: absolute;bottom: 0;*/
+    width: 100%;
+    padding: 1% 0; /*opacity: 0.7;*/
+    z-index: 5000;
+}
+
+.bb_desc1 h3 {
+    margin: 20px 0;
+}
+
+.bb_desc1 p {
+    color: #333;
+    text-align: center;
+    min-height: 80px;
+    padding: 20px 20px;
+    overflow: auto;
+}
+
+.bb_desc1 a {
+    display: block;
+    background-color: #3c508d;
+    color: #fff;
+    text-align: center;
+    width: 40%;
+    border-radius: 5px;
+    margin: 10px auto;
+    padding: 5px;
+}
+
+.bb_desc2 {
+    display: none;
+    margin-top: 20px;
+    z-index: 5500;
+}
+
+
+@media only screen and (max-width: 944px) {
+
+
+    .bb_main {
+        width: auto;
+        height: 500px;
+        clear: both;
+        max-height: unset;
+        overflow: unset;
+    }
+
+    .bb_main .rslides {
+        z-index: 999;
+        position: relative;
+        list-style: none;
+        overflow: hidden;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background-color: #fff;
+    }
+
+    .bb_main .rslides li {
+        -webkit-backface-visibility: hidden;
+        position: absolute;
+        display: none;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    .bb_main .rslides li:first-child {
+        position: relative;
+        display: block;
+        float: left;
+    }
+
+    .bb_main .rslides img {
+        display: block;
+        height: 500px;
+        float: right;
+        width: auto;
+        position: relative;
+        right: -65%;
+    }
+
+    /*
+
+    .bb_h3_text{background-color: rgba(44, 43, 72, 0.4);position:absolute;top: 0;right:0;width: 90%;color:#fff;z-index: 9999;height:100%;font-size: 32px;line-height: 150%;padding:70px 5%;display: block;text-align: center;}
+
+    .bb_p_text{position: absolute;right: 0;top: 43%;color: #fff;z-index: 9999;font-size: 23px;display: block;width: 90%;padding:50px 5%;text-align: center;}
+    .bb_p_text a{color: inherit;font-size: 18px;}
+
+    */
+    .bb .lt {
+        padding-top: 10px;
+        width: 90%;
+        float: none;
+        min-height: unset;
+        padding-left: unset;
+        margin: auto;
+    }
+
+    .bb .lt .img_blk {
+        width: 32%;
+        float: left;
+        margin: 0.5%;
+        position: relative;
+    }
+
+    /*.bb .lt .img_blk p{font-size: 13px;padding: 0;}
+    */
+    .bb .rt {
+        padding-top: 10px;
+        width: 90%;
+        float: none; /*background: #f2f2f2;*/
+        min-height: 400px;
+        position: relative;
+        overflow: hidden;
+        margin: auto;
+        text-align: center;
+    }
+
+
+    .item-1, .item-2, .item-3 {
+        position: absolute;
+        display: block;
+        top: 5%;
+        width: 90%;
+        animation-duration: 30s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        overflow: hidden;
+    }
+
+
+    /*@keyframes anim-1 {
+      0%, 8.3% { right: -100%; opacity: 0; }
+      8.3%,25% { right: 5%; opacity: 1; }
+      33.33%, 100% {opacity: 0; }
+    }
+
+    @keyframes anim-2 {
+      0%, 33.33% { right: -100%; opacity: 0; }
+      41.63%, 58.29% { right: 5%; opacity: 1; }
+      66.66%, 100% {opacity: 0; }
+    }
+
+    @keyframes anim-3 {
+      0%, 66.66% { right: -100%; opacity: 0; }
+      74.96%, 91.62% { right: 5%; opacity: 1; }
+      95% {opacity: 0; }
+      100% {opacity: 0;}
+
+    }*/
+    .bb .rt h3 {
+        font-size: 28px;
+    }
+
+    .bb_blk_img {
+        width: 98%;
+        float: none;
+        margin: 0% auto;
+        margin-top: 10%;
+    }
+
+    .mob_dsp {
+        display: block;
+    }
+
+    #spcl_bb {
+        width: 85%;
+    }
+
+    #intro h3 {
+        display: none;
+    }
+
+    #intro h1 {
+        font-weight: normal;
+        line-height: 130%;
+    }
+
+    .tour_blk {
+        width: 85%;
+    }
+
+    .col50 {
+        width: unset;
+        display: block;
+    }
+
+    form {
+        overflow: unset;
+    }
+
+
+}
+

@@ -1,0 +1,95 @@
+.fixed {
+    width: 30%;
+    position: fixed;
+    left: 20px;
+    top: 170px;
+  
+}  
+
+.courses {
+    width: 70%;
+    float: right;
+}
+
+.courseDesc {
+    background-color: #f1f2f6;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 4%;
+}
+
+.descLi {
+    list-style-type: disc;
+    padding-left: 3%;
+    
+}
+
+.btn {
+    background-color: #3B3B98;
+    color: #f1f2f6;
+    width: 20%;
+    height: 60px;
+    margin-left: 85.5;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #6E6EA8;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.partnLogos {
+    width: 100%;
+
+}
+
+.partn {
+    width: 20%;
+    display: inline-block;
+    margin-right: 4%;
+}
+
+@media screen and (max-width: 600px) {
+    .fixed {
+        visibility: hidden;
+    }
+
+    .courses {
+        width: 100%;
+    }
+
+    .partnLogos {
+        width: 100%;
+        text-align: center;
+    }
+
+    .partn {
+        width: 50%;
+        display: inline-block;
+        margin-bottom: 10%;
+    }
+
+    .h2 {
+        text-align: center;
+    }
+
+    .btn {
+        background-color: #3B3B98;
+        color: #f1f2f6;
+        width: 40%;
+        height: 50px;
+        margin-left: 65.5%;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+}
